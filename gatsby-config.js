@@ -1,8 +1,18 @@
+import contentfulConfig from './contentful.json';
+
 const siteMetadata = {
   name: 'Gatsby Strict Starter',
   description:
     'Demo for a Gatsby starter with strict linting and auto-formatting rules.',
 };
+contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID || contentfulConfig.spaceId,
+  accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN || contentfulConfig.accessToken,
+  downloadLocal:true
+};
+
+
+
 
 module.exports = {
   siteMetadata,
@@ -20,6 +30,10 @@ module.exports = {
         lang: 'en-US',
         start_url: '/',
       },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: contentfulConfig,
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
