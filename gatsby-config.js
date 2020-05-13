@@ -1,5 +1,4 @@
-import contentfulConfig from './contentful.json';
-
+import contentfulConfig = require('./contentful');
 const siteMetadata = {
   name: 'Gatsby Strict Starter',
   description:
