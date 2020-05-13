@@ -1,4 +1,5 @@
-import contentfulConfig = require('./contentful');
+/* eslint-disable */
+let contentfulConfig = require('./contentful'); // eslint-disable-line @typescript-eslint/no-var-requires
 const siteMetadata = {
   name: 'Gatsby Strict Starter',
   description:
